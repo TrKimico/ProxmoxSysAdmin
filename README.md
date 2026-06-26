@@ -36,7 +36,7 @@ It's strongly recommended not to install these software directly into your Proxm
 - All scripts are meant to be executed in a dedicated LXC / VM except update_all_containers.sh which should live in your node shell.
 - Execute all commands after replacing <directory>/<file.sh>  with the path to the file you wish to use.
 - All scripts are ready out of the box except update_all_containers which has to be manually configured. Use method 2.
-### **Method 1: One-Liner Installation **
+### **Method 1: One-Liner Installation**
 Simply run this command inside your LXC / VM console
 ``` bash
 bash <(curl -s https://raw.githubusercontent.com/TrKimico/ProxmoxAdminScripts/main/<directory>/<file.sh>)
