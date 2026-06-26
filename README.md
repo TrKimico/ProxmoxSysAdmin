@@ -1,4 +1,4 @@
-# **Proxmox Admin Project**
+# **Proxmox SysAdmin Project**
 This project is meant to grow as I document all the means to download and maintain my Proxmox infrastructure. The project is made of two main directories : 
 - Setup  : contains the install scripts for each service.
 - Update : contains the update scripts for the services that can't be upgraded with a single line of code provided by the vendor.
@@ -34,7 +34,7 @@ It's strongly recommended not to install these software directly into your Proxm
 ## **Set Up**
 - The methods are described for the Setup/ scripts but will work just as well for the update scripts.
 - All scripts are meant to be executed in a dedicated LXC / VM except update_all_containers.sh which should live in your node shell.
-- Execute all commands after replacing "/<directory>/<file.sh>" with the path to the file you wish to use.
+- Execute all commands after replacing `<directory>/<file>` with the path to the file you wish to use.
 - All scripts are ready out of the box except update_all_containers which has to be manually configured. Use method 2.
 ### **Method 1: One-Liner Installation**
 Simply run this command inside your LXC / VM console
