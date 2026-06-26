@@ -39,13 +39,13 @@ It's strongly recommended not to install these software directly into your Proxm
 ### **Method 1: One-Liner Installation**
 Simply run this command inside your LXC / VM console
 ``` bash
-bash <(curl -s https://raw.githubusercontent.com/TrKimico/ProxmoxAdminScripts/main/<directory>/<file.sh>)
+bash <(curl -s https://raw.githubusercontent.com/TrKimico/ProxmoxSysAdmin/main/<directory>/<file.sh>)
 ```
 
 ### **Method 2: Download and Launch**
 Download the script inside your LXC / VM console
 ``` bash
-curl -O https://raw.githubusercontent.com/TrKimico/ProxmoxAdminScripts/main/<directory>/<file.sh>
+curl -O https://raw.githubusercontent.com/TrKimico/ProxmoxSysAdmin/main/<directory>/<file.sh>
 ```
 Make it executable :
 ``` bash
