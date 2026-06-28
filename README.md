@@ -24,7 +24,7 @@ It's strongly recommended not to install these software directly into your Proxm
 │   ├── setup_navidrome.sh
 │   ├── setup_nextcloud.sh
 │   ├── setup_onlyoffice.sh
-│   └── setup_vaultarden.sh
+│   └── setup_vaultwarden.sh
 └── Update
     ├── update_all_containers.sh
     ├── update_navidrome.sh
