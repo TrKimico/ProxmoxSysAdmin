@@ -65,7 +65,7 @@ cd /opt/vaultwarden
 
 # Reference the Nginx Reverse Proxy address
 echo "$SEPARATOR"
-read -p "Enter the full address at which your reverse proxy redirects traffic (exp : http://vaultwarden.domain.com) " ADDRESS
+read -p "Enter the full address at which your reverse proxy redirects traffic (exp : http://vaultwarden.domain.com (default port:80)) " ADDRESS
 echo "The address is : ${ADDRESS}"
 echo "$SEPARATOR"
 # create vaultwarden docker compose file
