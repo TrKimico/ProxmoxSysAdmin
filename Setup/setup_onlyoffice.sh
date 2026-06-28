@@ -46,6 +46,9 @@ echo -e "${GREEN}${SEPARATOR}${NC}"
 echo -e "${GREEN} Starting ${software} installation${NC}"
 echo -e "${GREEN}${SEPARATOR}${NC}\n"
 
+# fix ipv6 connectivity
+echo "precedence ::ffff:0:0/96  100" >> /etc/gai.conf
+
 # make sure everything is up to date
 apt update -qq && apt upgrade -y
 
