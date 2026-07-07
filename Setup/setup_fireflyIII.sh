@@ -165,7 +165,7 @@ rm composer-setup.php
 export COMPOSER_ALLOW_SUPERUSER=1
 
 # Verify Composer
-composer --version
+/usr/local/bin/composer --version
 
 ################################################################################
 # Step 9: Download Firefly III
@@ -219,7 +219,7 @@ chmod -R 775 ${INSTALL_DIR}/bootstrap/cache
 
 # Install Composer dependencies
 cd ${INSTALL_DIR}
-sudo -u www-data composer install --no-dev --no-interaction
+sudo -u www-data /usr/local/bin/composer install --no-dev --no-interaction
 
 # Initialize database
 sudo -u www-data php artisan migrate:fresh --seed --force
