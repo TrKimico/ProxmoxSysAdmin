@@ -104,7 +104,7 @@ else
 fi
 
 # Prepare the services to install with Whiptail
-mapfile -t servicenames < <(curl -s "https://api.github.com/repos/TrKimico/ProxmoxSysAdmin/contents/Setup" \
+mapfile -t servicenames < <(curl -s "https://api.github.com/repos/TrKimico/ProxmoxSysAdmin/contents/Setup/Services" \
   | jq -r '.[] | select(.type == "file") | .name' \
   | sed -E 's/^setup_//; s/\.sh$//')
 # Generate the whiptail menu items
