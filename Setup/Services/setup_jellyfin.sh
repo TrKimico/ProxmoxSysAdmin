@@ -74,7 +74,7 @@ if ! sha256sum -c install-debuntu.sh.sha256sum; then
 fi
 
 # run it
-if bash install-debuntu.sh; then
+if SKIP_CONFIRM=true bash install-debuntu.sh; then
     echo -e "${GREEN}${SEPARATOR}${NC}"
     echo -e "${GREEN} Installation successful! You can now access ${software} at ${SERVER_IP}:8096${NC}"
     echo -e "${GREEN}${SEPARATOR}${NC}"
