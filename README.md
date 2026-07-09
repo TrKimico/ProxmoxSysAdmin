@@ -1,6 +1,6 @@
 # **Proxmox SysAdmin Project**
 This project is meant to grow as I document all the means to download and maintain my Proxmox infrastructure. The project is made of two main directories : 
-- Setup  : contains the install scripts for each service.
+- Setup  : contains the install scripts for each service and a macro installation script to create and setup several containers at once.
 - Update : contains the update scripts for the services that can't be upgraded with a single line of code provided by the vendor.
 
 ⚠️⚠️ **Always** double check scripts found online before running them on your machine. The files provided here come with no warranty whatsoever. ⚠️⚠️
@@ -11,20 +11,26 @@ The Proxmox community already has a long list of install scripts available in a 
 ## **Recommended Architecture**
 It's strongly recommended not to install these software directly into your Proxmox node, but in a dedicated LXC (LinuX Container) or VM (Virtual Machine) with a one machine = one software logic. This logic of containerization makes it easy to :
 - delete an LXC if something went wrong during the install and starting fresh in a few minutes
-- separating concerns; if there is something wrong with Apache (software used to host webservers), it will only be disrupting one service, not the whole architecture.
-- easier debugging; if a service isn't working, the source of the problem is easier to pin down.
+- separate concerns; if there is something wrong with Apache (software used to host webservers), it will only be disrupting one service, not the whole architecture
+- debug; if a service isn't working, the source of the problem is easier to pin down.
 
 ## **Available Scripts**
 ```
 ├── Setup
-│   ├── setup_audiobookshelf.sh
-│   ├── setup_fireflyIII.sh
-│   ├── setup_homarr.sh
-│   ├── setup_immich.sh
-│   ├── setup_navidrome.sh
-│   ├── setup_nextcloud.sh
-│   ├── setup_onlyoffice.sh
-│   └── setup_vaultwarden.sh
+│   ├── Services
+│   │   ├── setup_audiobookshelf.sh
+│   │   ├── setup_fireflyIII.sh
+│   │   ├── setup_homarr.sh
+│   │   ├── setup_immich.sh
+│   │   ├── setup_jellyfin.sh
+│   │   ├── setup_navidrome.sh
+│   │   ├── setup_nextcloud.sh
+│   │   ├── setup_nginx-proxy-manager.sh
+│   │   ├── setup_onlyoffice.sh
+│   │   ├── setup_pi-hole.sh
+│   │   ├── setup_vaultwarden.sh
+│   │   └── setup_wireguard.sh
+│   └── setup_multiple_containers.sh
 └── Update
     ├── update_all_containers.sh
     ├── update_navidrome.sh
@@ -32,8 +38,8 @@ It's strongly recommended not to install these software directly into your Proxm
 ```
 
 ## **Set Up**
-- The methods are described for the Setup/ scripts but will work just as well for the update scripts.
-- All scripts are meant to be executed in a dedicated LXC / VM except update_all_containers.sh which should live in your node shell.
+- The methods are described for the /Setup/Services scripts but will work just as well for the update scripts.
+- All scripts are meant to be executed in a dedicated LXC / VM except update_all_containers.sh and setup_multiple_containers.sh which should live in your node shell.
 - Execute all commands after replacing `<directory>/<file>` with the path to the file you wish to use.
 - All scripts are ready out of the box except update_all_containers which has to be manually configured. Use method 2.
 ### **Method 1: One-Liner Installation**
