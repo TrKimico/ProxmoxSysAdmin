@@ -23,6 +23,7 @@ It's strongly recommended not to install these software directly into your Proxm
 │   │   ├── setup_homarr.sh
 │   │   ├── setup_immich.sh
 │   │   ├── setup_jellyfin.sh
+│   │   ├── setup_kavita.sh
 │   │   ├── setup_navidrome.sh
 │   │   ├── setup_nextcloud.sh
 │   │   ├── setup_nginx-proxy-manager.sh
@@ -35,6 +36,7 @@ It's strongly recommended not to install these software directly into your Proxm
     ├── update_all_containers.sh
     ├── update_navidrome.sh
     └── update_nextcloud.sh
+
 ```
 
 ## **Set Up**
