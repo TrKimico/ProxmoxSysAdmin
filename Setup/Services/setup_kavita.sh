@@ -6,7 +6,7 @@
 #   (meant to run on a server)
 #
 # Global Variables:
-#   None
+#   Text colour display, network information, software name
 #
 # Requirements
 #   A Debian-based system
@@ -15,7 +15,6 @@
 #   Set the database password
 #   Remove any remaining Docker version and install it fresh
 #   Fetch the docker yml config file
-#   Configure the local .env file
 #   Start the service
 ####################################################
 
