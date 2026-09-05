@@ -14,7 +14,7 @@ SEPARATOR="==========================="
 # define useful variables
 NOTES_FILE="/root/auto_install_notes.log"
 LOG_FILE="/root/auto_install_output.log"
-TEMPLATE="debian-13-standard_13.1-2_amd64.tar.zst"
+TEMPLATE=$(pveam available | awk '/debian-13-standard/ {print $2}' | sort -V | tail -1)
 GATEWAY=$(ip route | awk '/default/ {print $3; exit}')
 PVE_IP=$(ip route get 1.1.1.1 | awk '{print $7; exit}')
 BASE_IP=$(echo "$PVE_IP" | cut -d. -f1-3)
