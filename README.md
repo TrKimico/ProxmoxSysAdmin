@@ -30,7 +30,8 @@ It's strongly recommended not to install these software directly into your Proxm
 │   │   ├── setup_onlyoffice.sh
 │   │   ├── setup_pi-hole.sh
 │   │   ├── setup_vaultwarden.sh
-│   │   └── setup_wireguard.sh
+│   │   ├── setup_wireguard.sh
+│   │   └── setup_zoneminder.sh
 │   └── setup_multiple_containers.sh
 └── Update
     ├── update_all_containers.sh
